@@ -15,7 +15,7 @@ export default function demo(strapi: Props) {
                 {data.map((item, i) => (
                     <li key={i}>
                         <p>{item.id} : {item.attributes.name}</p>
-                        <p><img src={"http://localhost:1337" + item.attributes.coverimage.data.attributes.url} /></p>
+                        <p><img src={process.env.WWW + item.attributes.coverimage.data.attributes.url} /></p>
                         <p>{item.attributes.detail}</p>    
                         <p>{item.attributes.longitude} , {item.attributes.latitude}</p>                    
                     </li>

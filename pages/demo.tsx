@@ -14,9 +14,10 @@ export default function demo(strapi: Props) {
             <ul>
                 {data.map((item, i) => (
                     <li key={i}>
-                        <p>{item.attributes.name}</p>
-                        <p>{item.attributes.detail}</p>
+                        <p>{item.id} : {item.attributes.name}</p>
                         <p><img src={"http://localhost:1337" + item.attributes.coverimage.data.attributes.url} /></p>
+                        <p>{item.attributes.detail}</p>    
+                        <p>{item.attributes.longitude} , {item.attributes.latitude}</p>                    
                     </li>
                 ))}
             </ul>
